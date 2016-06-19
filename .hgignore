@@ -1,0 +1,9 @@
+.*\.o
+.*\.a
+
+\.git
+\.gitignore
+\.gitmodules
+
+\.vim/bundle/.*/tags
+\.vim/\.netrwhist

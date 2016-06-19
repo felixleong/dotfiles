@@ -1,0 +1,39 @@
+[ui]
+ssh = ssh -C
+username = Seh Hui "Felix" Leong <felixleong@gmail.com>
+editor = vim
+ignore = ~/.gitignore_global
+commitsubrepos = false
+
+[web]
+#cacerts = $HOME/.hg/hg-dummy-cert.pem
+
+[extensions]
+eol = 
+color = 
+pager =
+fetch =
+graphlog =
+hgk =
+rebase =
+mq =
+onsub = ~/.hgext/onsub/onsub.py
+hgshelve = ~/.hgext/hgshelve/hgshelve.py
+hgflow = ~/.hgext/hgflow/src/hgflow/hgflow.py
+
+[pager]
+pager = LESS='FSRX' less
+ignore = version, help, update, serve, record
+
+[hooks]
+#pretxncommit.crlf = python:hgext.win32text.forbidcrlf
+
+[alias]
+upsub = onsub "if [ -d .git ]; then git pull; elif [ -d .hg ]; then hg update; else echo 'Unsupported SCM'; fi"
+
+[patch]
+eol = auto
+
+[diff]
+ignorews = true
+ignoreblanklines = true
