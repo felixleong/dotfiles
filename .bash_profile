@@ -1,14 +1,17 @@
-# Backward compatibility for the most part
-if [ -f "${HOME}/.bashrc" ] ; then
-  source "${HOME}/.bashrc"
-fi
-
-# General configuration
 CLICOLOR=1
+SVN_EDITOR=vim
 PS1="[\W]\$ "
+HISTCONTROL=ignoreboth
 
-# Paths
-PATH=$PATH:$HOME/bin:$HOME/.rbenv/bin
+set -o vi
+export PATH="$HOME/.rbenv/bin:$PATH"
 
-# Programming environment setup
+# Python environment configuration
+WORKON_HOME=~/.virtualenvs
+VIRTUALENVWRAPPER_PYTHON=$(which python)
+source /usr/local/bin/virtualenvwrapper.sh
+
+# Ruby environment
 eval "$(rbenv init -)"
+alias rbex='bundle exec ruby'
+alias rkex='bundle exec rake'

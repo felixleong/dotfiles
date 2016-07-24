@@ -48,3 +48,7 @@ tags
 *.list
 *.patch
 *.otl
+
+# Ruby development
+###################
+vendor/bundle
