@@ -8,7 +8,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 
 # Python environment configuration
 WORKON_HOME=~/.virtualenvs
-VIRTUALENVWRAPPER_PYTHON=$(which python)
+VIRTUALENVWRAPPER_PYTHON=$(which python3)
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Ruby environment
