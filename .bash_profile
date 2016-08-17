@@ -2,9 +2,10 @@ CLICOLOR=1
 SVN_EDITOR=vim
 PS1="[\W]\$ "
 HISTCONTROL=ignoreboth
+EDITOR=vim
 
 set -o vi
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:./node_modules/.bin:$PATH"
 
 # Python environment configuration
 WORKON_HOME=~/.virtualenvs
@@ -13,5 +14,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # Ruby environment
 eval "$(rbenv init -)"
+alias ls='ls --color=auto'
 alias rbex='bundle exec ruby'
 alias rkex='bundle exec rake'

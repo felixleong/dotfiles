@@ -6,12 +6,12 @@ call pathogen#helptags()
 
 " GUI settings
 " ------------
-colorscheme solarized
-set bg=dark
 set t_Co=256  " force vim to use 256 colors
+set t_ut=
+colorscheme jellybeans
+set background=dark
 let g:solarized_termcolors=16  " use solarized 256 fallback
 let g:solarized_termtrans=1
-set statusline=%{expand('%:p:t')}\ %<\(%{expand('%:p:h')}\)%=\ %m%r%y%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}[%3l,%3c]%{fugitive#statusline()}
 
 set ruler wildmenu hidden visualbell noerrorbells mousehide
 set history=1000
@@ -22,7 +22,6 @@ set wildmenu wildmode=list:longest
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set noswapfile
 set pastetoggle=<f2>
-set textwidth=80
 
 " Vim text settings
 " -----------------
@@ -124,7 +123,7 @@ cmap w!! w !sudo tee % > /dev/null
 " Tab patterns
 " Mixed mode - half tabs are spaces
 nnoremap <Leader>0t :set noexpandtab tabstop=8 softtabstop=4 shiftwidth=4<CR>
-nnoremap <Leader>2t :set expandtab tabstop=2 shiftwidth=2<CR>
+nnoremap <Leader>2t :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 nnoremap <Leader>4t :set expandtab tabstop=4 shiftwidth=4<CR>
 nnoremap <Leader>4ft :set noexpandtab tabstop=4 softtabstop=4 shiftwidth=4<CR>
 nnoremap <Leader>8t :set expandtab tabstop=8 shiftwidth=8<CR>
@@ -224,6 +223,10 @@ map <leader>x <plug>NERDCommenterToggle
 let g:jshint2_save = 1
 let g:jshint2_read = 1
 
+" ** Airline
+let g:airline#extensions#tabline#enabled = 1
+set laststatus=2
+
 " Functions
 " ---------
 "  Set options for code
@@ -266,7 +269,7 @@ autocmd FileType cs,java                set foldtext=FoldText()
 autocmd FileType sql                    set foldmethod=syntax foldlevel=0
 autocmd FileType python                 set omnifunc=pythoncomplete#Complete
 autocmd BufRead,BufNewFile *.j2         set filetype=jinja
-autocmd BufRead,BufNewFile *.html       set filetype=htmldjango
+autocmd BufRead,BufNewFile *.html       set filetype=htmldjango sw=2 sts=2 ts=2
 autocmd BufWritePre *.php,*.phtml,*.html,*.py,*.js,*.css :%s/\s\+$//e
 autocmd BufWritePost *.py               call Flake8()
 
