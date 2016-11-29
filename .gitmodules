@@ -70,3 +70,15 @@
 [submodule ".vim/bundle/livemark.vim"]
 	path = .vim/bundle/livemark.vim
 	url = https://github.com/miyakogi/livemark.vim
+[submodule ".tmux/plugins/tpm"]
+	path = .tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule ".tmux/plugins/tmux-yank"]
+	path = .tmux/plugins/tmux-yank
+	url = https://github.com/tmux-plugins/tmux-yank
+[submodule ".tmux/plugins/tmux-sensible"]
+	path = .tmux/plugins/tmux-sensible
+	url = https://git::@github.com/tmux-plugins/tmux-sensible
+[submodule ".tmux/plugins/tmux-copycat"]
+	path = .tmux/plugins/tmux-copycat
+	url = https://git::@github.com/tmux-plugins/tmux-copycat
