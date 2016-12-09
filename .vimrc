@@ -10,6 +10,7 @@ set t_Co=256  " force vim to use 256 colors
 set t_ut=
 colorscheme jellybeans
 set background=dark
+set colorcolumn=80
 let g:solarized_termcolors=16  " use solarized 256 fallback
 let g:solarized_termtrans=1
 
