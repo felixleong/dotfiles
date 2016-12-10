@@ -10,6 +10,7 @@ set t_Co=256  " force vim to use 256 colors
 set t_ut=
 colorscheme jellybeans
 set background=dark
+set colorcolumn=80
 let g:solarized_termcolors=16  " use solarized 256 fallback
 let g:solarized_termtrans=1
 
@@ -271,7 +272,6 @@ autocmd FileType python                 set omnifunc=pythoncomplete#Complete
 autocmd BufRead,BufNewFile *.j2         set filetype=jinja
 autocmd BufRead,BufNewFile *.html,*.htm,*.tmpl       set filetype=jinja sw=2 sts=2 ts=2
 autocmd BufWritePre *.php,*.phtml,*.html,*.py,*.js,*.css :%s/\s\+$//e
-autocmd BufWritePost *.py               call Flake8()
 
 " Add the virtualenv's site-packages to vim path
 "py << EOF
