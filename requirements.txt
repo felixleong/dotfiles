@@ -1,4 +1,5 @@
 misaka
 pygments
 tornado
+ptpython
 tmuxp

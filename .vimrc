@@ -228,6 +228,9 @@ let g:jshint2_read = 1
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
+" ** Syntastic
+let g:syntastic_python_python_exec = 'python3'
+
 " Functions
 " ---------
 "  Set options for code
