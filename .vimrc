@@ -272,6 +272,7 @@ autocmd FileType sh                     set fileformat=unix
 autocmd FileType cs,java                set foldtext=FoldText()
 autocmd FileType sql                    set foldmethod=syntax foldlevel=0
 autocmd FileType python                 set omnifunc=pythoncomplete#Complete
+autocmd FileType md, rst                set tw=79
 autocmd BufRead,BufNewFile *.j2         set filetype=jinja
 autocmd BufRead,BufNewFile *.html,*.htm,*.tmpl       set filetype=jinja sw=2 sts=2 ts=2
 autocmd BufWritePre *.php,*.phtml,*.html,*.py,*.js,*.css :%s/\s\+$//e
