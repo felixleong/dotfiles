@@ -79,3 +79,9 @@
 [submodule ".tmux/plugins/tmux-copycat"]
 	path = .tmux/plugins/tmux-copycat
 	url = https://git::@github.com/tmux-plugins/tmux-copycat
+[submodule ".vim/bundle/tsuquyomi"]
+	path = .vim/bundle/tsuquyomi
+	url = https://github.com/Quramy/tsuquyomi.git
+[submodule ".vim/bundle/vimproc.vim"]
+	path = .vim/bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
