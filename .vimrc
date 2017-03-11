@@ -69,7 +69,6 @@ nnoremap <Leader>rts :%s/\s\+$/<CR>
 nnoremap <silent> <Leader>n :silent :nohlsearch<CR>
 nnoremap <Leader>dos :set fileformat=dos<CR>
 nnoremap <Leader>unix :set fileformat=unix<CR>
-nnoremap <Leader>dm :delm 
 nmap . .`[
 
 " Folding mappings
@@ -208,9 +207,6 @@ let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 " ** Tasklist
 map <leader>td <Plug>TaskList
 
-" ** PEP-8
-let g:pep8_map='<leader>8'
-
 " ** Supertab
 let g:SuperTabDefaultCompletionType="context"
 
@@ -238,6 +234,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" ** Livedown
+nnoremap <Leader>ld :LivedownToggle<CR>
 
 " Functions
 " ---------

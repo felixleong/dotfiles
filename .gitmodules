@@ -64,9 +64,6 @@
 [submodule ".vim/bundle/vim-jinja"]
 	path = .vim/bundle/vim-jinja
 	url = https://github.com/lepture/vim-jinja
-[submodule ".vim/bundle/livemark.vim"]
-	path = .vim/bundle/livemark.vim
-	url = https://github.com/miyakogi/livemark.vim
 [submodule ".tmux/plugins/tpm"]
 	path = .tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
@@ -100,3 +97,6 @@
 [submodule ".vim/bundle/vim-unimpaired"]
 	path = .vim/bundle/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
+[submodule ".vim/bundle/vim-livedown"]
+	path = .vim/bundle/vim-livedown
+	url = git://github.com/shime/vim-livedown.git
