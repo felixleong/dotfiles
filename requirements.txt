@@ -1,2 +1,9 @@
+virtualenv
+virtualenvwrapper
+pipenv
+jupyter
+flake8
+jedi
 ptpython
+ipython
 tmuxp

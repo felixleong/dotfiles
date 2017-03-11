@@ -264,11 +264,6 @@ function! Num2S(num, len)
     let text = '' . a:num
     return strpart(filler, 1, a:len - strlen(text)) . text
 endfunction
-function! FoldText()
-    let sub = substitute(getline(v:foldstart), '/\*\|\*/\|{{{\d\=', '', 'g')
-    let diff = v:foldend - v:foldstart + 1
-    return  '+' . v:folddashes . '[' . Num2S(diff,3) . ']' . sub
-endfunction
 
 " Customized setting for filetype
 " -------------------------------
@@ -276,25 +271,9 @@ endfunction
 " Probably put it in ftplugin directories
 autocmd FileType c,cpp,cs,vb,java,python,php,javascript call SetOptionForCode()
 autocmd FileType sh                     set fileformat=unix
-autocmd FileType cs,java                set foldtext=FoldText()
 autocmd FileType sql                    set foldmethod=syntax foldlevel=0
-autocmd FileType python                 set omnifunc=pythoncomplete#Complete
-autocmd FileType md, rst                set tw=79
-autocmd BufRead,BufNewFile *.j2         set filetype=jinja
-autocmd BufRead,BufNewFile *.html,*.htm,*.tmpl       set filetype=jinja sw=2 sts=2 ts=2
-autocmd BufWritePre *.php,*.phtml,*.html,*.py,*.js,*.css :%s/\s\+$//e
-
-" Add the virtualenv's site-packages to vim path
-"py << EOF
-"import os.path
-"import sys
-"import vim
-"if 'VIRTUAL_ENV' in os.environ:
-"    project_base_dir = os.environ['VIRTUAL_ENV']
-"    sys.path.insert(0, project_base_dir)
-"    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-"    execfile(activate_this, dict(__file__=activate_this))
-"EOF
+autocmd FileType markdown,rst          set tw=79
+autocmd BufRead,BufNewFile *.j2,*.html,*.htm,*.tmpl       set filetype=jinja sw=2 sts=2 ts=2
 
 " MISC NOTES
 " ----------
