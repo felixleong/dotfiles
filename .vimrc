@@ -239,7 +239,6 @@ endfunction
 " -------------------------------
 " Set the autocommands here
 " Probably put it in ftplugin directories
-let g:markdown_folding = 1
 autocmd FileType c,cpp,cs,vb,java,python,php,javascript call SetOptionForCode()
 autocmd FileType sh                     set fileformat=unix
 autocmd FileType sql                    set foldmethod=syntax foldlevel=0
