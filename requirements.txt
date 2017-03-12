@@ -1,4 +1,11 @@
-misaka
-pygments
-tornado
+virtualenv
+virtualenvwrapper
+pipenv
+jupyter
+flake8
+flake8_docstrings
+jedi
+ptpython
+ipython
 tmuxp
+proselint
