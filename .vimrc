@@ -78,18 +78,9 @@ nnoremap <silent> <Leader>f3 :set foldlevel=3<CR>
 nnoremap <silent> <Leader>fa :set foldlevel=0<CR>
 nnoremap <silent> <Leader>f0 :set foldlevel=999<CR>
 
-" Tabs
-nnoremap <Leader>nt :tabnew 
-nnoremap <Leader>tc :tabclose<CR>
-
 " Replacement patterns
-inoremap <Leader>tdate <C-R>=strftime("%Y-%m-%d")<CR>
-inoremap <Leader>tts <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
-inoremap <Leader>fname <C-R>=expand("%")<CR>
-inoremap <Leader>jcls <C-R>=expand("%<")<CR>
-inoremap <Leader>fn <C-R>=expand("%:t")<CR>
-inoremap kj <Esc>
-inoremap KJ <Esc>
+inoremap qq <Esc>
+inoremap QQ <Esc>
 
 " Formatting
 vmap Q gq
@@ -101,20 +92,8 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-" Easy window split jumping
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
-" Quickfix window
-nnoremap <Leader>co :copen<CR>
-nnoremap <Leader>cx :cclose<CR>
-
 " Mappings for plugins
 nnoremap <Leader>ctag :!(cd %:p:h;ctags *)&
-nnoremap <Leader>s :Search 
-nnoremap <Leader>rs :SearchReset<CR>
 nnoremap <Leader>w :set wrap!<CR>
 
 " Sudo save - when I forget to sudo before editing the file
@@ -157,15 +136,8 @@ function! s:swap_down()
     exec n + 1
 endfunction
 
-noremap <silent> <c-s-up> :call <SID>swap_up()<CR>
-noremap <silent> <c-s-down> :call <SID>swap_down()<CR>
 noremap <silent> <c-s-k> :call <SID>swap_up()<CR>
 noremap <silent> <c-s-j> :call <SID>swap_down()<CR>
-
-" Multi (split) window keys
-set wmw=0
-nmap <c-h> <c-w>h<c-w><bar> " CTRL-H move to left window
-nmap <c-l> <c-w>l<c-w><bar> " CTRL-L move to right window
 
 " Toggle spell checking
 let g:SpellEnabled=0
@@ -179,12 +151,12 @@ function! ToggleSpell()
 endfunction
 nmap <silent> <F7> :call ToggleSpell()<CR>
 
-" Scroll locking
-map <Leader>zz :let &scrolloff=999-&scrolloff<cr>
-
 " Abbrevations
-iabbr shfl Seh Hui "Felix" Leong
-iabbr shl Seh Hui Leong
+iabbr _sign Seh Hui Leong
+iabbr _date <C-R>=strftime("%Y-%m-%d")<CR>
+iabbr _dtime <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
+iabbr _path <C-R>=expand("%")<CR>
+iabbr _fn <C-R>=expand("%:t")<CR>
 
 
 " Customization for plugins
@@ -193,19 +165,9 @@ iabbr shl Seh Hui Leong
 let NERDTreeIgnore=['\.a$', '\.o$', '\.pyc$', '\.swp$', '\~$', '__pycache__']
 let NERDTreeChDirMode=2
 nmap <silent> <Leader>tr :NERDTreeToggle<CR>
-nmap <silent> <Leader>ot :NERDTree 
-
-" ** Source Explorer
-nmap <silent> <Leader>se :SrcExplToggle<CR>
-
-" ** Taglist
-nnoremap <Leader>tl :TlistToggle<CR>
-
-" ** ShowMarks
-let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 " ** Tasklist
-map <leader>td <Plug>TaskList
+map <leader>tl <Plug>TaskList
 
 " ** Supertab
 let g:SuperTabDefaultCompletionType="context"
@@ -235,9 +197,16 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_aggregate_errors = 1
+
+let g:syntastic_markdown_checkers = ['mdl', 'proselint']
 
 " ** Livedown
 nnoremap <Leader>ld :LivedownToggle<CR>
+
+" ** Voom
+let g:voom_default_mode = 'markdown'
+nnoremap <Leader>vt :VoomToggle<CR>
 
 " Functions
 " ---------
@@ -270,6 +239,7 @@ endfunction
 " -------------------------------
 " Set the autocommands here
 " Probably put it in ftplugin directories
+let g:markdown_folding = 1
 autocmd FileType c,cpp,cs,vb,java,python,php,javascript call SetOptionForCode()
 autocmd FileType sh                     set fileformat=unix
 autocmd FileType sql                    set foldmethod=syntax foldlevel=0
