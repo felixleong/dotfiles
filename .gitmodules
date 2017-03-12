@@ -127,3 +127,6 @@
 [submodule ".tmux/plugins/tmux-prefix-highlight"]
 	path = .tmux/plugins/tmux-prefix-highlight
 	url = git://github.com/tmux-plugins/tmux-prefix-highlight
+[submodule ".vim/bundle/vim-markdown"]
+	path = .vim/bundle/vim-markdown
+	url = git://github.com/gabrielelana/vim-markdown
