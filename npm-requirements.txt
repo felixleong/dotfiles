@@ -3,3 +3,4 @@ livedown
 typescript
 eslint
 tslint
+jsonlint

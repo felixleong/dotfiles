@@ -9,3 +9,4 @@ ptpython
 ipython
 tmuxp
 proselint
+yamllint
