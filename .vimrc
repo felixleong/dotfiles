@@ -66,7 +66,7 @@ nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 nnoremap <C-Tab> gt
 nnoremap <Leader>rts :%s/\s\+$/<CR>
-nnoremap <silent> <Leader>n :silent :nohlsearch<CR>
+nnoremap <silent> <Leader>nh :silent :nohlsearch<CR>
 nnoremap <Leader>dos :set fileformat=dos<CR>
 nnoremap <Leader>unix :set fileformat=unix<CR>
 nmap . .`[
@@ -198,8 +198,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
-
-let g:syntastic_markdown_checkers = ['mdl', 'proselint']
 
 " ** Livedown
 nnoremap <Leader>ld :LivedownToggle<CR>
