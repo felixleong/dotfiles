@@ -31,7 +31,7 @@ Setup
 3. Install the required Node and Python 3 packages
 
     ```bash
-    sudo pip3 install -r requirements.txt
+    sudo pip3 install --user -r requirements.txt
     cat npm-requirements.txt | sudo xargs install -g
     ```
 

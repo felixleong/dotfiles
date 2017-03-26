@@ -10,7 +10,7 @@ export PATH="$HOME/.rbenv/bin:./node_modules/.bin:$HOME/bin/:$HOME/.local/bin:./
 # Python environment configuration
 WORKON_HOME=~/.virtualenvs
 VIRTUALENVWRAPPER_PYTHON=$(which python3)
-source /usr/local/bin/virtualenvwrapper.sh
+source $HOME/.local/bin/virtualenvwrapper.sh
 
 # Ruby environment
 eval "$(rbenv init -)"
