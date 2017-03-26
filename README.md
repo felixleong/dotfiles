@@ -26,13 +26,19 @@ Setup
     cd ~
     ln -s dotfiles/.vimrc .
     ln -s dotfiles/.vim .
+
+    # Git
+    ln -s dotfiles/.gitconfig .
+
+    # NPM
+    ln -s dotfiles/.npmrc .
     ```
 
 3. Install the required Node and Python 3 packages
 
     ```bash
     sudo pip3 install --user -r requirements.txt
-    cat npm-requirements.txt | sudo xargs install -g
+    cat npm-requirements.txt | sudo xargs npm install -g
     ```
 
 Updating Submodules
