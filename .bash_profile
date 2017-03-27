@@ -5,7 +5,7 @@ HISTCONTROL=ignoreboth
 EDITOR=vim
 
 set -o vi
-export PATH="$HOME/.rbenv/bin:./node_modules/.bin:$HOME/.local/lib/node_modules/.bin:$HOME/bin/:$HOME/.local/bin:./bin:$PATH"
+export PATH="./node_modules/.bin:./bin:$HOME/.rbenv/bin:$HOME/.local/bin/:$HOME/bin:$PATH"
 
 # Python environment configuration
 WORKON_HOME=~/.virtualenvs
