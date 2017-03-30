@@ -8,11 +8,10 @@ call pathogen#helptags()
 " ------------
 set t_Co=256  " force vim to use 256 colors
 set t_ut=
-colorscheme jellybeans
 set background=dark
+colorscheme jellybeans
+
 set colorcolumn=80
-let g:solarized_termcolors=16  " use solarized 256 fallback
-let g:solarized_termtrans=1
 
 set ruler wildmenu hidden visualbell noerrorbells mousehide
 set history=1000
@@ -23,6 +22,10 @@ set wildmenu wildmode=list:longest
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set noswapfile
 set pastetoggle=<f2>
+
+set foldmethod=syntax
+set foldopen-=search
+set nofoldenable
 
 " Vim text settings
 " -----------------
@@ -152,6 +155,7 @@ endfunction
 nmap <silent> <F7> :call ToggleSpell()<CR>
 
 " Abbrevations
+" - expand("%:t") = refer to :help filename-modifiers
 iabbr _sign Seh Hui Leong
 iabbr _date <C-R>=strftime("%Y-%m-%d")<CR>
 iabbr _dtime <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
@@ -178,10 +182,6 @@ let g:ctrlp_map = '<leader>p'
 " ** NERDCommenter
 map <leader>x <plug>NERDCommenterToggle
 
-" ** JSHint2
-let g:jshint2_save = 1
-let g:jshint2_read = 1
-
 " ** Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
@@ -205,44 +205,3 @@ nnoremap <Leader>ld :LivedownToggle<CR>
 " ** Voom
 let g:voom_default_mode = 'markdown'
 nnoremap <Leader>vt :VoomToggle<CR>
-
-" Functions
-" ---------
-"  Set options for code
-function! SetOptionForCode()
-    set nowrap number
-    if exists('+colorcolumn')
-        set colorcolumn=80
-    else
-        let w:m2=matchadd('ErrorMsg', '\%80v.\+', -1)
-    endif
-
-    " Folding
-    " -------
-    set foldmethod=syntax
-    set nofoldenable
-    set foldopen-=search
-    set foldlevel=100 " Don't automatically fold
-    set foldnestmax=20
-endfunction
-
-" Text folding functions
-function! Num2S(num, len)
-    let filler = "                                                            "
-    let text = '' . a:num
-    return strpart(filler, 1, a:len - strlen(text)) . text
-endfunction
-
-" Customized setting for filetype
-" -------------------------------
-" Set the autocommands here
-" Probably put it in ftplugin directories
-autocmd FileType c,cpp,cs,vb,java,python,php,javascript call SetOptionForCode()
-autocmd FileType sh                     set fileformat=unix
-autocmd FileType sql                    set foldmethod=syntax foldlevel=0
-autocmd FileType markdown,rst          set tw=79
-autocmd BufRead,BufNewFile *.j2,*.html,*.htm,*.tmpl       set filetype=jinja sw=2 sts=2 ts=2
-
-" MISC NOTES
-" ----------
-" - expand("%:t") = refer to :help filename-modifiers
