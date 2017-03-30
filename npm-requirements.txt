@@ -1,6 +1,6 @@
 js-beautify
 livedown
 typescript
-eslint
 tslint
 jsonlint
+standard
