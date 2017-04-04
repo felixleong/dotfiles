@@ -5,12 +5,12 @@ HISTCONTROL=ignoreboth
 EDITOR=vim
 
 set -o vi
-export PATH="$HOME/.rbenv/bin:./node_modules/.bin:$HOME/bin/:$HOME/.local/bin:./bin:$PATH"
+export PATH="./node_modules/.bin:./bin:$HOME/.rbenv/bin:$HOME/.local/bin/:$HOME/bin:$PATH"
 
 # Python environment configuration
 WORKON_HOME=~/.virtualenvs
 VIRTUALENVWRAPPER_PYTHON=$(which python3)
-source /usr/local/bin/virtualenvwrapper.sh
+source $HOME/.local/bin/virtualenvwrapper.sh
 
 # Ruby environment
 eval "$(rbenv init -)"
