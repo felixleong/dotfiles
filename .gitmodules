@@ -139,3 +139,6 @@
 [submodule ".vim/bundle/vim-tmux-navigator"]
 	path = .vim/bundle/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator
+[submodule ".vim/bundle/apiblueprint.vim"]
+	path = .vim/bundle/apiblueprint.vim
+	url = git://github.com/kylef/apiblueprint.vim
