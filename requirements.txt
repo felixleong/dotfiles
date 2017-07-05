@@ -1,4 +1,6 @@
 git+https://github.com/xybu/onedrived-dev
+awscli==1.11.92
+awsebcli-3.10.1
 flake8-docstrings==1.0.3
 howdoi==1.1.9
 keyrings.alt==2.2
