@@ -142,3 +142,6 @@
 [submodule ".vim/bundle/apiblueprint.vim"]
 	path = .vim/bundle/apiblueprint.vim
 	url = git://github.com/kylef/apiblueprint.vim
+[submodule ".vim/bundle/vim-autotag"]
+	path = .vim/bundle/vim-autotag
+	url = git://github.com/craigemery/vim-autotag
