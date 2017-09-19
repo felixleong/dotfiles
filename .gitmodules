@@ -106,9 +106,6 @@
 [submodule ".vim/bundle/tagbar"]
 	path = .vim/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
-[submodule ".vim/bundle/vim-easytags"]
-	path = .vim/bundle/vim-easytags
-	url = git://github.com/xolox/vim-easytags
 [submodule ".vim/bundle/vim-misc"]
 	path = .vim/bundle/vim-misc
 	url = git://github.com/xolox/vim-misc
@@ -142,6 +139,6 @@
 [submodule ".vim/bundle/apiblueprint.vim"]
 	path = .vim/bundle/apiblueprint.vim
 	url = git://github.com/kylef/apiblueprint.vim
-[submodule ".vim/bundle/vim-autotag"]
-	path = .vim/bundle/vim-autotag
-	url = git://github.com/craigemery/vim-autotag
+[submodule ".vim/bundle/vim-gutentags"]
+	path = .vim/bundle/vim-gutentags
+	url = git://github.com/ludovicchabant/vim-gutentags.git

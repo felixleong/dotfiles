@@ -56,7 +56,7 @@ set iminsert=1
 set imsearch=1
 
 " Ignore directories when searching
-set wildignore+=**/node_modules/**,**/vendor/**
+set wildignore+=**/node_modules/**,**/vendor/**,**/migrations/**
 
 " Macros and keymapping
 " ---------------------
@@ -213,3 +213,6 @@ nnoremap <Leader>vt :VoomToggle<CR>
 
 " ** Jedi.vim
 let g:jedi#popup_on_dot = 0
+
+" ** Tagbar
+nnoremap <Leader>tb :TagbarToggle
