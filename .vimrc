@@ -86,7 +86,6 @@ nnoremap <silent> <Leader>f0 :set foldlevel=999<CR>
 
 " Replacement patterns
 inoremap qq <Esc>
-inoremap QQ <Esc>
 
 " Formatting
 vmap Q gq
@@ -99,7 +98,6 @@ map <left> <nop>
 map <right> <nop>
 
 " Mappings for plugins
-nnoremap <Leader>ctag :!(cd %:p:h;ctags *)&
 nnoremap <Leader>w :set wrap!<CR>
 
 " Sudo save - when I forget to sudo before editing the file
@@ -159,11 +157,11 @@ nmap <silent> <F7> :call ToggleSpell()<CR>
 
 " Abbrevations
 " - expand("%:t") = refer to :help filename-modifiers
-iabbr _sign Seh Hui Leong
-iabbr _date <C-R>=strftime("%Y-%m-%d")<CR>
-iabbr _dtime <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
-iabbr _path <C-R>=expand("%")<CR>
-iabbr _fn <C-R>=expand("%:t")<CR>
+iabbr xxsign Seh Hui Leong
+iabbr xxdate <C-R>=strftime("%Y-%m-%d")<CR>
+iabbr xxdtime <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
+iabbr xxpath <C-R>=expand("%")<CR>
+iabbr xxfn <C-R>=expand("%:t")<CR>
 
 
 " Customization for plugins
@@ -215,4 +213,4 @@ nnoremap <Leader>vt :VoomToggle<CR>
 let g:jedi#popup_on_dot = 0
 
 " ** Tagbar
-nnoremap <Leader>tb :TagbarToggle
+nnoremap <Leader>tb :TagbarToggle<CR>
