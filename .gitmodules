@@ -61,9 +61,6 @@
 [submodule ".vim/bundle/tsuquyomi"]
 	path = .vim/bundle/tsuquyomi
 	url = https://github.com/Quramy/tsuquyomi.git
-[submodule ".vim/bundle/vimproc.vim"]
-	path = .vim/bundle/vimproc.vim
-	url = https://github.com/Shougo/vimproc.vim.git
 [submodule ".vim/bundle/vim-sensible"]
 	path = .vim/bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
@@ -142,3 +139,6 @@
 [submodule ".vim/bundle/vim-gutentags"]
 	path = .vim/bundle/vim-gutentags
 	url = git://github.com/ludovicchabant/vim-gutentags.git
+[submodule ".vim/bundle/vim-tsx"]
+	path = .vim/bundle/vim-tsx
+	url = git://github.com/ianks/vim-tsx

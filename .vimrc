@@ -19,7 +19,7 @@ set undolevels=1000
 set scrolloff=3
 set shortmess=atI
 set wildmenu wildmode=list:longest
-set wildignore=*.swp,*.bak,*.pyc,*.class
+set wildignore=*.swp,*.bak,*.pyc,*.class,tags
 set noswapfile
 set pastetoggle=<f2>
 
@@ -167,7 +167,7 @@ iabbr xxfn <C-R>=expand("%:t")<CR>
 " Customization for plugins
 " -------------------------
 " ** NERDTree
-let NERDTreeIgnore=['\.a$', '\.o$', '\.pyc$', '\.swp$', '\~$', '__pycache__']
+let NERDTreeIgnore=['\.a$', '\.o$', '\.pyc$', '\.swp$', '\~$', '__pycache__', 'tags', 'tags.\(lock\|temp\)$']
 let NERDTreeChDirMode=2
 nmap <silent> <Leader>tr :NERDTreeToggle<CR>
 

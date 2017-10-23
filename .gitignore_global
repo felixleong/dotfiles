@@ -39,7 +39,12 @@ Thumbs.db
 # Backup files #
 ################
 *.*~
+
+# Ctags
+#######
 tags
+tags.temp
+tags.lock
 
 # Unimportant files #
 #####################
@@ -52,3 +57,7 @@ tags
 # Ruby development
 ###################
 vendor/bundle
+
+# NodeJS development
+####################
+node_modules/
