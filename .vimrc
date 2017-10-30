@@ -19,7 +19,7 @@ set undolevels=1000
 set scrolloff=3
 set shortmess=atI
 set wildmenu wildmode=list:longest
-set wildignore=*.swp,*.bak,*.pyc,*.class
+set wildignore=*.swp,*.bak,*.pyc,*.class,tags
 set noswapfile
 set pastetoggle=<f2>
 
@@ -55,6 +55,9 @@ set imdisable imcmdline
 set iminsert=1
 set imsearch=1
 
+" Ignore directories when searching
+set wildignore+=**/node_modules/**,**/vendor/**,**/migrations/**
+
 " Macros and keymapping
 " ---------------------
 " Map leader
@@ -83,7 +86,6 @@ nnoremap <silent> <Leader>f0 :set foldlevel=999<CR>
 
 " Replacement patterns
 inoremap qq <Esc>
-inoremap QQ <Esc>
 
 " Formatting
 vmap Q gq
@@ -96,7 +98,6 @@ map <left> <nop>
 map <right> <nop>
 
 " Mappings for plugins
-nnoremap <Leader>ctag :!(cd %:p:h;ctags *)&
 nnoremap <Leader>w :set wrap!<CR>
 
 " Sudo save - when I forget to sudo before editing the file
@@ -156,17 +157,17 @@ nmap <silent> <F7> :call ToggleSpell()<CR>
 
 " Abbrevations
 " - expand("%:t") = refer to :help filename-modifiers
-iabbr _sign Seh Hui Leong
-iabbr _date <C-R>=strftime("%Y-%m-%d")<CR>
-iabbr _dtime <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
-iabbr _path <C-R>=expand("%")<CR>
-iabbr _fn <C-R>=expand("%:t")<CR>
+iabbr xxsign Seh Hui Leong
+iabbr xxdate <C-R>=strftime("%Y-%m-%d")<CR>
+iabbr xxdtime <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
+iabbr xxpath <C-R>=expand("%")<CR>
+iabbr xxfn <C-R>=expand("%:t")<CR>
 
 
 " Customization for plugins
 " -------------------------
 " ** NERDTree
-let NERDTreeIgnore=['\.a$', '\.o$', '\.pyc$', '\.swp$', '\~$', '__pycache__']
+let NERDTreeIgnore=['\.a$', '\.o$', '\.pyc$', '\.swp$', '\~$', '__pycache__', 'tags', 'tags.\(lock\|temp\)$']
 let NERDTreeChDirMode=2
 nmap <silent> <Leader>tr :NERDTreeToggle<CR>
 
@@ -194,10 +195,12 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
+let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
+
+nmap <silent> <Leader>st :SyntasticToggle<CR>
 
 " ** Livedown
 nnoremap <Leader>ld :LivedownToggle<CR>
@@ -205,3 +208,9 @@ nnoremap <Leader>ld :LivedownToggle<CR>
 " ** Voom
 let g:voom_default_mode = 'markdown'
 nnoremap <Leader>vt :VoomToggle<CR>
+
+" ** Jedi.vim
+let g:jedi#popup_on_dot = 0
+
+" ** Tagbar
+nnoremap <Leader>tb :TagbarToggle<CR>

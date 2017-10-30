@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "js-beautify": "^1.7.4",
+    "jsonlint": "^1.6.2",
+    "livedown": "^2.1.1",
+    "npms-cli": "^1.6.0",
+    "standard": "^10.0.3",
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3"
+  }
+}
