@@ -16,6 +16,8 @@ fi
 
 # Ruby environment
 eval "$(rbenv init -)"
+alias python='python3'
+alias pip='pip3'
 alias ls='ls --color=auto'
 alias bdex='bundle exec'
 alias rbex='bundle exec ruby'
