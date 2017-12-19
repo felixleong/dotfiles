@@ -32,6 +32,12 @@ Setup
 
     # NPM
     ln -s dotfiles/.npmrc .
+
+    # Yarn
+    ln -s dotfiles/package.json .config/yarn/global/package.json
+
+    # EsLint
+    ln -s dotfiles/.eslintrc.js .
     ```
 
 3. Install the required Node and Python 3 packages
