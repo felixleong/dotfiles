@@ -1,8 +1,5 @@
 {
   "dependencies": {
-    "eslint": "^4.13.1",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-react": "^7.5.1",
     "heroku-cli": "^6.14.43",
     "js-beautify": "^1.7.4",
     "jsonlint": "^1.6.2",

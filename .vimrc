@@ -8,8 +8,8 @@ call pathogen#helptags()
 " ------------
 set t_Co=256  " force vim to use 256 colors
 set t_ut=
-set background=dark
-colorscheme jellybeans
+set background=light
+colorscheme solarized
 
 set colorcolumn=80
 

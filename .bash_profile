@@ -6,6 +6,7 @@ EDITOR=vim
 
 set -o vi
 export PATH="./node_modules/.bin:./bin:$HOME/.rbenv/bin:$HOME/.local/bin/:$HOME/bin:$PATH"
+eval $(dircolors /home/felix/.dir_colors/dircolors)
 
 # Python environment configuration
 WORKON_HOME=~/.virtualenvs
