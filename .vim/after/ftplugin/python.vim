@@ -1,4 +1,4 @@
-let s:flake8_args = "--ignore=D100,D101,D200,D205,D400,D105,D106"
+let s:flake8_args = "--max-complexity 10 --ignore=D100,D101,D200,D205,D400,D105,D106"
 let g:syntastic_python_flake8_args = get(g:, 'syntastic_python_flake8_args', s:flake8_args)
 
 function! Py_docwarn()

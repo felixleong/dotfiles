@@ -97,6 +97,9 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
+" Autocompletion
+:inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
 " Mappings for plugins
 nnoremap <Leader>w :set wrap!<CR>
 
