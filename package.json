@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "cloc": "^2.3.3",
     "heroku-cli": "^6.14.43",
     "js-beautify": "^1.7.4",
     "jsonlint": "^1.6.2",

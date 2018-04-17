@@ -12,6 +12,7 @@ set background=light
 colorscheme solarized
 
 set colorcolumn=80
+set cursorcolumn
 
 set ruler wildmenu hidden visualbell noerrorbells mousehide
 set history=1000
