@@ -11,7 +11,7 @@ set t_ut=
 set background=light
 colorscheme solarized
 
-set colorcolumn=80
+set colorcolumn=88
 set cursorcolumn
 
 set ruler wildmenu hidden visualbell noerrorbells mousehide
@@ -218,3 +218,7 @@ let g:jedi#popup_on_dot = 0
 
 " ** Tagbar
 nnoremap <Leader>tb :TagbarToggle<CR>
+
+
+" File autocommands
+autocmd BufWrite *.py :Black

@@ -1,10 +1,13 @@
 git+https://github.com/xybu/onedrived-dev
 awscli>=1.11.92
+black>=18.4a2
 flake8-docstrings>=1.0.3
 howdoi>=1.1.9
+jedi>=0.12.0
 keyrings.alt>=2.2
 pipdeptree>=0.10.1
 pipenv>=3.5.4
+pre-commit>=1.8.2
 proselint>=0.8.0
 ptpython>=0.36
 thefuck>=3.15
