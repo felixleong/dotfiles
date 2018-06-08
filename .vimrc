@@ -8,8 +8,8 @@ call pathogen#helptags()
 " ------------
 set t_Co=256  " force vim to use 256 colors
 set t_ut=
-set background=dark
-colorscheme manxome
+set background=light
+colorscheme solarized
 
 set colorcolumn=88
 set cursorcolumn
@@ -221,4 +221,8 @@ nnoremap <Leader>tb :TagbarToggle<CR>
 
 
 " File autocommands
-autocmd BufWrite *.py :Black
+autocmd BufWrite *.py :call s:postbufwrite_py()
+function! s:postbufwrite_py()
+    execute "Black"
+    execute "redraw!"
+endfunction
