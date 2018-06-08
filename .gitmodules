@@ -142,3 +142,6 @@
 [submodule ".vim/bundle/vim-tsx"]
 	path = .vim/bundle/vim-tsx
 	url = git://github.com/ianks/vim-tsx
+[submodule ".vim/bundle/ale"]
+	path = .vim/bundle/ale
+	url = https://github.com/w0rp/ale
