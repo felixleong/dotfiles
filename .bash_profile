@@ -5,14 +5,13 @@ HISTCONTROL=ignoreboth
 EDITOR=vim
 
 set -o vi
-export PATH="./node_modules/.bin:./bin:$HOME/.local/bin/:$HOME/bin:$HOME/.rbenv/bin:$HOME/.nenv/bin:$HOME/.yarn/bin:$PATH"
+export PATH="./node_modules/.bin:./bin:$HOME/.local/bin/:$HOME/bin:$HOME/.rbenv/bin:$HOME/.yarn/bin:$PATH"
 
 # Python environment
 PIPENV_VENV_IN_PROJECT=true
 
 # Ruby environment
 eval "$(rbenv init -)"
-eval "$(nenv init -)"
 
 alias ls='ls --color=auto'
 alias bdex='bundle exec'
