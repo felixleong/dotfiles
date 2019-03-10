@@ -2,6 +2,7 @@
   "dependencies": {
     "@webpack-cli/init": "^0.0.8",
     "cloc": "^2.3.3",
+    "eslint-config-prettier": "^4.1.0",
     "heroku": "^7.4.11",
     "js-beautify": "^1.7.5",
     "jsonlint": "^1.6.3",

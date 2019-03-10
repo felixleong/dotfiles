@@ -205,6 +205,12 @@ let g:syntastic_aggregate_errors = 1
 
 nmap <silent> <Leader>st :SyntasticToggle<CR>
 
+" ** ALE
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\  '*': ['remove_trailing_lines', 'trim_whitespace'],
+\}
+
 " ** Livedown
 nnoremap <Leader>ld :LivedownToggle<CR>
 
@@ -217,11 +223,3 @@ let g:jedi#popup_on_dot = 0
 
 " ** Tagbar
 nnoremap <Leader>tb :TagbarToggle<CR>
-
-
-" File autocommands
-autocmd BufWrite *.py :call s:postbufwrite_py()
-function! s:postbufwrite_py()
-    execute "Black"
-    execute "redraw!"
-endfunction
