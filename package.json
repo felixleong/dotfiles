@@ -7,6 +7,7 @@
     "jsonlint": "^1.6.3",
     "livedown": "^2.1.1",
     "npms-cli": "^1.6.0",
+    "prettier": "^1.16.4",
     "standard": "^11.0.1",
     "ts-node": "^7.0.0",
     "tslint": "^5.10.0",
