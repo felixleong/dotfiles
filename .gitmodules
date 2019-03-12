@@ -34,9 +34,6 @@
 [submodule ".vim/bundle/SimpylFold"]
 	path = .vim/bundle/SimpylFold
 	url = https://github.com/tmhedberg/SimpylFold.git
-[submodule ".vim/bundle/syntastic"]
-	path = .vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic
 [submodule ".vim/bundle/vim-airline"]
 	path = .vim/bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline
@@ -79,9 +76,6 @@
 [submodule ".vim/bundle/vim-livedown"]
 	path = .vim/bundle/vim-livedown
 	url = git://github.com/shime/vim-livedown.git
-[submodule ".vim/bundle/jedi-vim"]
-	path = .vim/bundle/jedi-vim
-	url = https://github.com/davidhalter/jedi-vim
 [submodule ".vim/bundle/vim-virtualenv"]
 	path = .vim/bundle/vim-virtualenv
 	url = git://github.com/jmcantrell/vim-virtualenv
@@ -145,10 +139,15 @@
 [submodule ".vim/bundle/ale"]
 	path = .vim/bundle/ale
 	url = https://github.com/w0rp/ale
+[submodule ".vim/bundle/jedi-vim"]
+    path = .vim/bundle/jedi-vim
+    url = https://github.com/davidhalter/jedi-vim
+[submodule ".nenv"]
+	path = .nenv
+	url = https://github.com/ryuone/nenv.git
 [submodule ".rbenv"]
 	path = .rbenv
 	url = https://github.com/rbenv/rbenv.git
 [submodule ".rbenv/plugins/ruby-build"]
 	path = .rbenv/plugins/ruby-build
 	url = https://github.com/rbenv/ruby-build.git
-

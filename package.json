@@ -2,15 +2,19 @@
   "dependencies": {
     "@webpack-cli/init": "^0.0.8",
     "cloc": "^2.3.3",
+    "eslint-config-prettier": "^4.1.0",
     "heroku": "^7.4.11",
     "js-beautify": "^1.7.5",
     "jsonlint": "^1.6.3",
     "livedown": "^2.1.1",
     "npms-cli": "^1.6.0",
+    "prettier": "^1.16.4",
+    "proselint": "^0.1.7",
     "standard": "^11.0.1",
     "ts-node": "^7.0.0",
     "tslint": "^5.10.0",
     "typescript": "^2.9.1",
-    "webpack-cli": "^3.0.8"
+    "webpack-cli": "^3.0.8",
+    "write-good": "^1.0.1"
   }
 }
