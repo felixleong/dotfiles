@@ -9,6 +9,7 @@ call pathogen#helptags()
 set t_Co=256  " force vim to use 256 colors
 set t_ut=
 colorscheme solarized
+set bg=dark
 
 set colorcolumn=88
 set cursorcolumn
