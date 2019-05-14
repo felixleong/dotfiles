@@ -17,4 +17,6 @@ alias ls='ls --color=auto'
 alias bdex='bundle exec'
 alias rbex='bundle exec ruby'
 alias rkex='bundle exec rake'
+alias pygrep='grep --include=*.py --exclude-dir=migrations'
 
+[[ -f ~/.bash_alias ]] && . ~/.bash_alias

@@ -171,7 +171,7 @@ iabbr xxfn <C-R>=expand("%:t")<CR>
 " Customization for plugins
 " -------------------------
 " ** NERDTree
-let NERDTreeIgnore=['\.a$', '\.o$', '\.pyc$', '\.swp$', '\~$', '__pycache__', 'tags', 'tags.\(lock\|temp\)$']
+let NERDTreeIgnore=['\.a$', '\.o$', '\.pyc$', '\.swp$', '\~$', '__pycache__', '^tags', '^tags.\(lock\|temp\)$']
 let NERDTreeChDirMode=2
 nmap <silent> <Leader>tr :NERDTreeToggle<CR>
 

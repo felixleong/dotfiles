@@ -1,7 +1,8 @@
 let s:flake8_args = "--max-line-length=88 --max-complexity 10 --ignore=D100,D101,D200,D205,D400,D105,D106,W503"
 let g:syntastic_python_flake8_args = get(g:, 'syntastic_python_flake8_args', s:flake8_args)
-let b:ale_fixers = ['autopep8', 'isort', 'black']
+let b:ale_fixers = ['autopep8', 'black',  'isort']
 let g:ale_python_flake8_options = s:flake8_args
+let g:ale_python_isort_options = "--multi-line=3 --trailing-comma --force-grid-wrap=0 --use-parentheses --line-width=88"
 
 function! Py_docwarn()
     let g:syntastic_python_flake8_args = s:flake8_args
