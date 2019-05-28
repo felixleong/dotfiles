@@ -151,3 +151,6 @@
 [submodule ".rbenv/plugins/ruby-build"]
 	path = .rbenv/plugins/ruby-build
 	url = https://github.com/rbenv/ruby-build.git
+[submodule ".vim/bundle/vimwiki"]
+	path = .vim/bundle/vimwiki
+	url = https://github.com/vimwiki/vimwiki

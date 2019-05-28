@@ -224,3 +224,7 @@ let g:jedi#popup_on_dot = 0
 
 " ** Tagbar
 nnoremap <Leader>tb :TagbarToggle<CR>
+
+" ** VIM Wiki
+let g:vimwiki_list = [{'path': '~/OneDrive/vimwiki/',
+                      \'syntax': 'markdown', 'ext': '.md'}]
