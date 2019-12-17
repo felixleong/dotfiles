@@ -11,7 +11,7 @@ set t_ut=
 colorscheme solarized
 set bg=dark
 
-set colorcolumn=88
+set colorcolumn=88 tw=88
 set cursorcolumn
 
 set ruler wildmenu hidden visualbell noerrorbells mousehide
@@ -227,4 +227,4 @@ nnoremap <Leader>tb :TagbarToggle<CR>
 
 " ** VIM Wiki
 let g:vimwiki_list = [{'path': '~/OneDrive/vimwiki/',
-                      \'syntax': 'markdown', 'ext': '.md'}]
+                      \'syntax': 'markdown', 'ext': '.wiki'}]
