@@ -19,6 +19,7 @@
     dump = cat-file -p
     unstage = 'reset HEAD --'
     cloner = clone --recursive
+    submodule-branch = submodule foreach git rev-parse --abbrev-ref HEAD --
 
     # SVN related commands
     cherry-pick-svn = !GIT_EDITOR='sed -i /^git-svn-id:/d' git cherry-pick -e
