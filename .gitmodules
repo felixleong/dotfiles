@@ -157,3 +157,9 @@
 [submodule ".vim/bundle/vim-monokai"]
 	path = .vim/bundle/vim-monokai
 	url = https://github.com/sickill/vim-monokai
+[submodule "tmux-better-mouse-mode"]
+	path = tmux-better-mouse-mode
+	url = https://github.com/nhdaly/tmux-better-mouse-mode
+[submodule ".tmux/plugins/tmux-better-mouse-mode"]
+	path = .tmux/plugins/tmux-better-mouse-mode
+	url = https://github.com/nhdaly/tmux-better-mouse-mode

@@ -16,6 +16,8 @@
     "tslint": "^5.10.0",
     "typescript": "^2.9.1",
     "webpack-cli": "^3.0.8",
-    "write-good": "^1.0.1"
-  }
+    "write-good": "^1.0.1",
+    "yarn": "^1.22.10"
+  },
+  "name": "dotfiles"
 }

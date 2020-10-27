@@ -1,11 +1,10 @@
 [user]
-	name = Seh Hui, Leong
-	email = felixleong@gmail.com
+    name = Seh Hui, Leong
+    email = felixleong@gmail.com
 [core]
     editor = vim
-	excludesfile = ~/.gitignore_global
+    excludesfile = ~/.gitignore_global
     eol = lf
-    autocrlf = input
 [alias]
     ci = commit
     co = checkout
@@ -90,7 +89,7 @@
     fi"
 [color]
     ui = auto
-	diff = auto
+    diff = auto
 [push]
     default = simple
 [diff]
@@ -101,4 +100,4 @@
     smudge = unexpand --tabs=4 --first-only
     clean = expand --tabs=4 --initial
 [pull]
-	rebase = true
+    rebase = true
