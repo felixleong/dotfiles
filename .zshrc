@@ -108,6 +108,7 @@ alias awssh='assh -i ~/.ssh/soniapk'
 # Windows specific shorthand
 alias wcd=$'cd $(wslpath $(cmd.exe /c "echo %USERPROFILE%") | tr -d \'\\r\')'
 alias wmount='sudo mount -t drvfs'
+source $HOME/.aliases
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
