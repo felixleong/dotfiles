@@ -2,7 +2,7 @@
 export PATH="./node_modules/.bin:./bin:$HOME/.local/bin/:$HOME/bin:$HOME/.rbenv/bin:$HOME/.yarn/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/sehhui/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -73,7 +73,7 @@ plugins=(debian archlinux vi-mode git git-prompt git-hubflow django docker pytho
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-DEFAULT_USER="sehhui"
+DEFAULT_USER="$USER"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
