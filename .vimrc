@@ -230,3 +230,6 @@ nnoremap <Leader>tb :TagbarToggle<CR>
 " ** VIM Wiki
 let g:vimwiki_list = [{'path': '~/OneDrive/vimwiki/',
                       \'syntax': 'markdown', 'ext': '.wiki'}]
+
+" ** Snipmate
+let g:snipMate = { 'snippet_version' : 1 }
