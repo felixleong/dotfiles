@@ -1,5 +1,5 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="./node_modules/.bin:./bin:$HOME/.local/bin/:$HOME/bin:$HOME/.rbenv/bin:$HOME/.yarn/bin:$PATH"
+export PATH="./node_modules/.bin:$NVM_BIN:./bin:$HOME/.local/bin/:$HOME/bin:$HOME/.rbenv/bin:$HOME/.yarn/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -110,6 +110,10 @@ alias wcd=$'cd $(wslpath $(cmd.exe /c "echo %USERPROFILE%") | tr -d \'\\r\')'
 alias wmount='sudo mount -t drvfs'
 source $HOME/.aliases
 
+# Ruby stuff
+eval "$(rbenv init -)"
+
+# NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
