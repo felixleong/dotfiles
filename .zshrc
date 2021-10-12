@@ -68,7 +68,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(debian archlinux vi-mode git git-prompt git-hubflow django docker python yarn node npm tmux)
+plugins=(debian archlinux vi-mode git git-prompt git-hubflow docker python yarn node npm tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,7 +108,9 @@ alias awssh='assh -i ~/.ssh/soniapk'
 # Windows specific shorthand
 alias wcd=$'cd $(wslpath $(cmd.exe /c "echo %USERPROFILE%") | tr -d \'\\r\')'
 alias wmount='sudo mount -t drvfs'
-source $HOME/.aliases
+if [[ -a $HOME/.aliases ]]; then
+    source $HOME/.aliases
+fi
 
 # Ruby stuff
 eval "$(rbenv init -)"
