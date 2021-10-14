@@ -113,7 +113,9 @@ if [[ -a $HOME/.aliases ]]; then
 fi
 
 # Ruby stuff
-eval "$(rbenv init -)"
+if type "rbenv" &> /dev/null; then
+    eval "$(rbenv init -)"
+fi
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
