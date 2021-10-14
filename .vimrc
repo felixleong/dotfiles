@@ -6,12 +6,14 @@ call pathogen#helptags()
 
 " GUI settings
 " ------------
-set t_Co=256  " force vim to use 256 colors
+set termguicolors
+set t_Co=256
 set t_ut=
-colorscheme monokai
+colorscheme PaperColor
+set bg=light
 
 set colorcolumn=88 tw=88
-set cursorcolumn nowrap
+set nowrap
 
 set ruler wildmenu hidden visualbell noerrorbells mousehide
 set history=1000

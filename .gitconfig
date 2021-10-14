@@ -5,6 +5,7 @@
     editor = vim
     excludesfile = ~/.gitignore_global
     eol = lf
+    pager = less -iXFR
 [alias]
     ci = commit
     co = checkout
@@ -19,14 +20,9 @@
     unstage = 'reset HEAD --'
     cloner = clone --recursive
     submodule-branch = submodule foreach git rev-parse --abbrev-ref HEAD --
-
-    # SVN related commands
-    cherry-pick-svn = !GIT_EDITOR='sed -i /^git-svn-id:/d' git cherry-pick -e
-    branch-svn = svn branch
-    merge-svn = merge --squash
-    push-svn = svn dcommit
-    up = svn rebase
-    update = svn rebase
+    changelog = log --pretty=oneline --first-parent
+    show-current = rev-parse --abbrev-ref HEAD
+    graphall = log --all --graph
 
     # Whitespace busting aliases
     # Logic:
@@ -101,3 +97,5 @@
     clean = expand --tabs=4 --initial
 [pull]
     rebase = true
+[merge]
+    ff = no

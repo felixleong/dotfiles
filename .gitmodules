@@ -160,3 +160,6 @@
 [submodule ".tmux/plugins/tmux-better-mouse-mode"]
 	path = .tmux/plugins/tmux-better-mouse-mode
 	url = https://github.com/nhdaly/tmux-better-mouse-mode
+[submodule ".vim/bundle/papercolor-theme"]
+	path = .vim/bundle/papercolor-theme
+	url = https://github.com/NLKNguyen/papercolor-theme
