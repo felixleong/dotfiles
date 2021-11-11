@@ -224,13 +224,6 @@ let g:ale_fixers = {
 \  '*': ['remove_trailing_lines', 'trim_whitespace'],
 \}
 
-" ** Livedown
-nnoremap <Leader>ld :LivedownToggle<CR>
-
-" ** Voom
-let g:voom_default_mode = 'markdown'
-nnoremap <Leader>vt :VoomToggle<CR>
-
 " ** Jedi.vim
 let g:jedi#popup_on_dot = 0
 
@@ -244,4 +237,4 @@ let g:vimwiki_list = [{'path': '~/OneDrive/vimwiki/',
 let g:snipMate = { 'snippet_version' : 1 }
 
 " ** fzf
-map <leader>p <plug>Files
+nnoremap <leader>p :Files<CR>
