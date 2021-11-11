@@ -1,8 +1,33 @@
-" Pathogen - Load all plugin bundles
-" ----------------------------------
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
+" VIM Plug and plugins
+" --------------------
+call plug#begin("~/.vim/vimplugins")
+    Plug 'dense-analysis/ale'
+    Plug 'jlanzarotta/bufexplorer'
+    Plug 'Raimondi/delimitMate'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    Plug 'ludovicchabant/vim-gutentags'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+    Plug 'preservim/nerdtree'
+    Plug 'preservim/nerdcommenter'
+    Plug 'ervandew/supertab'
+    Plug 'tmhedberg/SimpylFold'
+    Plug 'godlygeek/tabular'
+    Plug 'preservim/tagbar'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'tpope/vim-fugitive'
+    Plug 'plasticboy/vim-markdown'
+    Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-sensible'
+    Plug 'tpope/vim-unimpaired'
+    Plug 'preservim/vimux'
+
+    " Themes
+    Plug 'NLKNguyen/papercolor-theme'
+    Plug 'altercation/vim-colors-solarized'
+    Plug 'sickill/vim-monokai'
+call plug#end()
 
 " GUI settings
 " ------------
@@ -171,7 +196,6 @@ iabbr xxdtime <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
 iabbr xxpath <C-R>=expand("%")<CR>
 iabbr xxfn <C-R>=expand("%:t")<CR>
 
-
 " Customization for plugins
 " -------------------------
 " ** NERDTree
@@ -184,9 +208,6 @@ map <leader>tl <Plug>TaskList
 
 " ** Supertab
 let g:SuperTabDefaultCompletionType="context"
-
-" ** Ctrl-P
-let g:ctrlp_map = '<leader>p'
 
 " ** NERDCommenter
 map <leader>x <plug>NERDCommenterToggle
@@ -219,6 +240,8 @@ nnoremap <Leader>tb :TagbarToggle<CR>
 " ** VIM Wiki
 let g:vimwiki_list = [{'path': '~/OneDrive/vimwiki/',
                       \'syntax': 'markdown', 'ext': '.wiki'}]
-
 " ** Snipmate
 let g:snipMate = { 'snippet_version' : 1 }
+
+" ** fzf
+map <leader>p <plug>Files
