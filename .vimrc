@@ -10,7 +10,7 @@ set termguicolors
 set t_Co=256
 set t_ut=
 colorscheme PaperColor
-set bg=light
+set bg=dark
 
 set colorcolumn=88 tw=88
 set nowrap
@@ -195,20 +195,6 @@ map <leader>x <plug>NERDCommenterToggle
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 set laststatus=2
-
-" ** Syntastic
-let g:syntastic_python_python_exec = 'python3'
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_aggregate_errors = 1
-
-nmap <silent> <Leader>st :SyntasticToggle<CR>
 
 " ** ALE
 let g:ale_fix_on_save = 1
