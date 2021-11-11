@@ -102,8 +102,6 @@ alias ls="ls --color=tty"
 alias bdex='bundle exec'
 alias rbex='bundle exec ruby'
 alias rkex='bundle exec rake'
-#alias pygrep='grep --include=*.py --exclude-dir=migrations'
-alias awssh='assh -i ~/.ssh/soniapk'
 
 # Windows specific shorthand
 alias wcd=$'cd $(wslpath $(cmd.exe /c "echo %USERPROFILE%") | tr -d \'\\r\')'
