@@ -171,8 +171,10 @@
 "
 " " For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
 " " vim: set filetype=tridactyl
- bind / fillcmdline find
- bind ? fillcmdline find -?
- bind n findnext 1
- bind N findnext -1
- bind ,<Space> nohlsearch
+colors quake
+
+bind / fillcmdline find
+bind ? fillcmdline find -?
+bind n findnext 1
+bind N findnext -1
+bind ,<Space> nohlsearch

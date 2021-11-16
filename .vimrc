@@ -23,6 +23,7 @@ call plug#begin("~/.vim/vimplugins")
     Plug 'tpope/vim-sensible'
     Plug 'tpope/vim-unimpaired'
     Plug 'preservim/vimux'
+    Plug 'tridactyl/vim-tridactyl'
 
     "" Themes
     Plug 'NLKNguyen/papercolor-theme'
