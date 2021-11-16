@@ -19,6 +19,8 @@ call plug#begin("~/.vim/vimplugins")
     Plug 'ludovicchabant/vim-gutentags'
     Plug 'tpope/vim-fugitive'
     Plug 'plasticboy/vim-markdown'
+    Plug 'xolox/vim-misc'
+    Plug 'xolox/vim-notes'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-sensible'
     Plug 'tpope/vim-unimpaired'
@@ -240,3 +242,6 @@ let g:snipMate = { 'snippet_version' : 1 }
 
 " ** fzf
 nnoremap <leader>p :Files<CR>
+
+" ** vim-notes
+let g:notes_directories = ['~/Documents/vimnotes',]

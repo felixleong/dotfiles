@@ -173,6 +173,10 @@
 " " vim: set filetype=tridactyl
 colors quake
 
+" Commands
+command SourceUpdate source https://raw.githubusercontent.com/felixleong/dotfiles/develop/.tridactylrc
+
+" Use the Tridactyl find feature instead of the inbuilt Firefox one
 bind / fillcmdline find
 bind ? fillcmdline find -?
 bind n findnext 1
