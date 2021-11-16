@@ -76,7 +76,7 @@ plugins=(
     git-prompt
     git-hubflow
     git-extras
-    docker
+    docker-compose
     python
     tmux
     fzf
