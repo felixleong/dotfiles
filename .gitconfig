@@ -20,7 +20,7 @@
     unstage = 'reset HEAD --'
     cloner = clone --recursive
     submodule-branch = submodule foreach git rev-parse --abbrev-ref HEAD --
-    changelog = log --pretty=oneline --first-parent
+    log-changes = log --pretty=oneline --first-parent
     show-current = rev-parse --abbrev-ref HEAD
     graphall = log --all --graph
 

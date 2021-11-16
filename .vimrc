@@ -6,7 +6,7 @@ call plug#begin("~/.vim/vimplugins")
     Plug 'Raimondi/delimitMate'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-    Plug 'ludovicchabant/vim-gutentags'
+    Plug 'davidhalter/jedi-vim'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
     Plug 'preservim/nerdtree'
     Plug 'preservim/nerdcommenter'
@@ -16,6 +16,7 @@ call plug#begin("~/.vim/vimplugins")
     Plug 'preservim/tagbar'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+    Plug 'ludovicchabant/vim-gutentags'
     Plug 'tpope/vim-fugitive'
     Plug 'plasticboy/vim-markdown'
     Plug 'tpope/vim-surround'
@@ -23,7 +24,7 @@ call plug#begin("~/.vim/vimplugins")
     Plug 'tpope/vim-unimpaired'
     Plug 'preservim/vimux'
 
-    " Themes
+    "" Themes
     Plug 'NLKNguyen/papercolor-theme'
     Plug 'altercation/vim-colors-solarized'
     Plug 'sickill/vim-monokai'

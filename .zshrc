@@ -68,7 +68,22 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(debian archlinux vi-mode git git-prompt git-hubflow docker python yarn node npm tmux)
+plugins=(
+    debian
+    archlinux
+    vi-mode
+    git
+    git-prompt
+    git-hubflow
+    git-extras
+    docker
+    python
+    tmux
+    fzf
+    dirhistory
+    jsontools
+    timer
+)
 
 source $ZSH/oh-my-zsh.sh
 
