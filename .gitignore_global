@@ -43,6 +43,7 @@ Thumbs.db
 # Python development #
 ######################
 .pyre/
+__pycache__/
 
 # Ctags
 #######

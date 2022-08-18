@@ -174,7 +174,7 @@
 colors quake
 
 " Commands
-command SourceUpdate source https://raw.githubusercontent.com/felixleong/dotfiles/develop/.tridactylrc
+command SourceUpdate source --url https://raw.githubusercontent.com/felixleong/dotfiles/develop/.tridactylrc
 
 " Use the Tridactyl find feature instead of the inbuilt Firefox one
 bind / fillcmdline find

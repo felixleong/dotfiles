@@ -87,7 +87,7 @@ set iminsert=1
 set imsearch=1
 
 " Ignore directories when searching
-set wildignore+=**/node_modules/**,**/vendor/**,**/migrations/**
+set wildignore+=**/node_modules/**,**/vendor/**,**/migrations/**,**/__pycache__/**
 
 " Auto redraw if necessary
 au FocusGained * :redraw!

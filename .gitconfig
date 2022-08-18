@@ -3,7 +3,7 @@
     email = sehhui@infin8co.com
 [core]
     editor = vim
-    excludesfile = ~/.gitignore_global
+    excludesfile = ~/.gitignore
     eol = lf
     pager = less -iXFR
 [alias]
@@ -20,8 +20,8 @@
     unstage = 'reset HEAD --'
     cloner = clone --recursive
     submodule-branch = submodule foreach git rev-parse --abbrev-ref HEAD --
-    log-changes = log --pretty=oneline --first-parent
-    show-current = rev-parse --abbrev-ref HEAD
+    log-changes = log --pretty=oneline --no-merges
+    show-current = branch --show-current
     graphall = log --all --graph
 
     # Whitespace busting aliases

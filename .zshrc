@@ -82,13 +82,14 @@ plugins=(
     fzf
     dirhistory
     jsontools
-    timer
+    #timer
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 DEFAULT_USER="$USER"
+export UGID="$(id -u):$(id -g)"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
