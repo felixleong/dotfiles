@@ -182,3 +182,6 @@ bind ? fillcmdline find -?
 bind n findnext 1
 bind N findnext -1
 bind ,<Space> nohlsearch
+
+" Sites to disable Tridactyl
+seturl tweetdeck.twitter.com superignore true
