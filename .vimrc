@@ -33,6 +33,9 @@ call plug#begin("~/.vim/vimplugins")
     Plug 'sickill/vim-monokai'
 call plug#end()
 
+" In-built plugins
+packadd cfilter
+
 " GUI settings
 " ------------
 set termguicolors

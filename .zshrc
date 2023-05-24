@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="fino"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -69,20 +69,26 @@ HIST_STAMPS="yyyy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    debian
     archlinux
-    vi-mode
-    git
-    git-prompt
-    git-hubflow
-    git-extras
-    docker-compose
-    python
-    tmux
-    fzf
+    colorize
+    colored-man-pages
+    debian
+    dircycle
     dirhistory
+    docker
+    docker-compose
+    fzf
+    git
+    git-auto-fetch
+    git-extras
+    git-hubflow
+    gitfast
     jsontools
-    #timer
+    poetry
+    python
+    timer
+    tmux
+    vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -90,6 +96,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 DEFAULT_USER="$USER"
 export UGID="$(id -u):$(id -g)"
+
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -114,7 +121,7 @@ export UGID="$(id -u):$(id -g)"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls="ls --color=tty"
+alias ls="ls --color=tty --group-directories-first"
 alias bdex='bundle exec'
 alias rbex='bundle exec ruby'
 alias rkex='bundle exec rake'
@@ -122,6 +129,7 @@ alias rkex='bundle exec rake'
 # Windows specific shorthand
 alias wcd=$'cd $(wslpath $(cmd.exe /c "echo %USERPROFILE%") | tr -d \'\\r\')'
 alias wmount='sudo mount -t drvfs'
+
 if [[ -a $HOME/.aliases ]]; then
     source $HOME/.aliases
 fi
