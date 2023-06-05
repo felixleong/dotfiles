@@ -31,6 +31,7 @@ call plug#begin("~/.vim/vimplugins")
     Plug 'NLKNguyen/papercolor-theme'
     Plug 'altercation/vim-colors-solarized'
     Plug 'sickill/vim-monokai'
+    Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 " In-built plugins
