@@ -43,7 +43,7 @@ set termguicolors
 set t_Co=256
 set t_ut=
 colorscheme PaperColor
-set bg=dark
+set bg=light
 
 set colorcolumn=88 tw=88
 set nowrap
@@ -61,6 +61,10 @@ set pastetoggle=<f2>
 set foldmethod=syntax
 set foldopen-=search
 set nofoldenable
+
+" Cursor
+let &t_EI = "\033[2 q" " NORMAL  █
+let &t_SI = "\033[5 q" " INSERT  |
 
 " Vim text settings
 " -----------------
