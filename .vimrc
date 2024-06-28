@@ -32,6 +32,9 @@ call plug#begin("~/.vim/vimplugins")
     Plug 'altercation/vim-colors-solarized'
     Plug 'sickill/vim-monokai'
     Plug 'christoomey/vim-tmux-navigator'
+
+    "" Syntax
+    Plug 'martinda/Jenkinsfile-vim-syntax'
 call plug#end()
 
 " In-built plugins

@@ -1,4 +1,6 @@
 let s:lint_ignore_list = " --ignore=D100,D101,D200,D205,D400,D105,D106,W503"
+let g:ale_python_auto_pipenv = 1
+let g:ale_python_auto_poetry = 1
 
 let b:ale_fixers = ['black', 'isort']
 let b:ale_linters = ['pyre', 'bandit', 'black', 'flake8']

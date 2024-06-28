@@ -91,8 +91,12 @@
 [color]
     ui = auto
     diff = auto
+[fetch]
+    prune = true
 [push]
     default = simple
+    autoSetupRemote = true
+
 [diff]
     whitespace = red reverse
     suppressBlankEmpty = true
