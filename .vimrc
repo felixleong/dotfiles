@@ -26,6 +26,7 @@ call plug#begin("~/.vim/vimplugins")
     Plug 'tpope/vim-unimpaired'
     Plug 'preservim/vimux'
     Plug 'tridactyl/vim-tridactyl'
+    Plug 'ycm-core/YouCompleteMe'
 
     "" Themes
     Plug 'NLKNguyen/papercolor-theme'

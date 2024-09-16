@@ -44,6 +44,7 @@ Thumbs.db
 ######################
 .pyre/
 __pycache__/
+.mypy_cache/
 
 # Ctags
 #######

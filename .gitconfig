@@ -3,7 +3,7 @@
     email = sehhui@infin8co.com
 [core]
     editor = vim
-    excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore_global
     eol = lf
     pager = less -iXFR
 [alias]
