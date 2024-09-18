@@ -21,7 +21,7 @@
     unstage = 'reset HEAD --'
     cloner = clone --recursive
     submodule-branch = submodule foreach git rev-parse --abbrev-ref HEAD --
-    log-changes = log --pretty=oneline
+    log-changes = log --format='%h | %ae %as ) %s'
     log-sm-changes = submodule foreach 'git fetch -a && git log-changes origin/production/base..origin/master && echo "====="'
     show-current = branch --show-current
     graphall = log --all --graph

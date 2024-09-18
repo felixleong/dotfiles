@@ -151,3 +151,5 @@ eval "$(pyenv init -)"
 
 # PLUGIN CONFIGURATION
 ZSH_TMUX_AUTOSTART=true
+
+if [ -e /home/sehhui/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sehhui/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
