@@ -1,6 +1,6 @@
 " VIM Plug and plugins
 " --------------------
-call plug#begin("~/.vim/vimplugins")
+call plug#begin()
     Plug 'dense-analysis/ale'
     Plug 'jlanzarotta/bufexplorer'
     Plug 'Raimondi/delimitMate'
@@ -21,7 +21,6 @@ call plug#begin("~/.vim/vimplugins")
     Plug 'plasticboy/vim-markdown'
     Plug 'xolox/vim-misc'
     Plug 'xolox/vim-notes'
-    Plug 'tpope/vim-surround'
     Plug 'tpope/vim-sensible'
     Plug 'tpope/vim-unimpaired'
     Plug 'preservim/vimux'
@@ -30,9 +29,6 @@ call plug#begin("~/.vim/vimplugins")
     Plug 'christoomey/vim-tmux-navigator'
 
     "" Themes
-    Plug 'NLKNguyen/papercolor-theme'
-    Plug 'altercation/vim-colors-solarized'
-    Plug 'sickill/vim-monokai'
     Plug 'zeekay/vice-colorful'
 
     "" Syntax

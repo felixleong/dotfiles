@@ -81,7 +81,7 @@ plugins=(
     git
     git-auto-fetch
     git-extras
-    git-hubflow
+    git-flow
     gitfast
     jsontools
     poetry
