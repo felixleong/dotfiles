@@ -1,35 +1,35 @@
 " VIM Plug and plugins
 " --------------------
 call plug#begin()
-    Plug 'dense-analysis/ale'
-    Plug 'jlanzarotta/bufexplorer'
     Plug 'Raimondi/delimitMate'
+    Plug 'SidOfc/mkdx'
+    Plug 'christoomey/vim-tmux-navigator'
+    Plug 'davidhalter/jedi-vim'
+    Plug 'dense-analysis/ale'
+    Plug 'ervandew/supertab'
+    Plug 'godlygeek/tabular'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+    Plug 'jlanzarotta/bufexplorer'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-    Plug 'davidhalter/jedi-vim'
-    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-    Plug 'preservim/nerdtree'
-    Plug 'preservim/nerdcommenter'
-    Plug 'ervandew/supertab'
-    Plug 'tmhedberg/SimpylFold'
-    Plug 'godlygeek/tabular'
-    Plug 'preservim/tagbar'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
     Plug 'ludovicchabant/vim-gutentags'
-    Plug 'tpope/vim-fugitive'
-    Plug 'plasticboy/vim-markdown'
-    Plug 'xolox/vim-misc'
-    Plug 'xolox/vim-notes'
-    Plug 'tpope/vim-sensible'
-    Plug 'tpope/vim-unimpaired'
+    Plug 'preservim/nerdcommenter'
+    Plug 'preservim/nerdtree'
+    Plug 'preservim/tagbar'
     Plug 'preservim/vimux'
+    Plug 'tmhedberg/SimpylFold'
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-sensible'
+    Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-unimpaired'
     Plug 'tridactyl/vim-tridactyl'
+    Plug 'vim-airline/vim-airline'
+    Plug 'xolox/vim-misc'
     Plug 'ycm-core/YouCompleteMe'
-    Plug 'christoomey/vim-tmux-navigator'
 
     "" Themes
     Plug 'zeekay/vice-colorful'
+    Plug 'vim-airline/vim-airline-themes'
 
     "" Syntax
     Plug 'martinda/Jenkinsfile-vim-syntax'
