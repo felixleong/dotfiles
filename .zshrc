@@ -84,7 +84,7 @@ plugins=(
     git-flow
     gitfast
     jsontools
-    poetry
+    per-directory-history
     python
     timer
     tmux

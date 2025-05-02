@@ -13,7 +13,7 @@
     br = branch
     lc = log ORIG_HEAD.. --stat --no-merges
     di = diff
-    dic = diff --cached
+    dic = diff --cached -b
     di-noimport = diff --ignore-matching-lines='^(from .* )*import .*'
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     type = cat-file -t

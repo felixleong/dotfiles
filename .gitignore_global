@@ -26,7 +26,6 @@ syntax:glob  # For Mercurial so that we can share the same ignore file
 # Logs and databases #
 ######################
 *.log
-# *.sql
 *.sqlite
 
 # OS generated files #
@@ -40,11 +39,16 @@ Thumbs.db
 ################
 *.*~
 
+# Docker #
+#========#
+.env
+
 # Python development #
 ######################
 .pyre/
 __pycache__/
 .mypy_cache/
+.python-version
 
 # Ctags
 #######
@@ -67,3 +71,4 @@ vendor/bundle
 # NodeJS development
 ####################
 node_modules/
+!.github/**/node_modules  # Exclude for Github Action scripts.

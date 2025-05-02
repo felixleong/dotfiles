@@ -4,15 +4,17 @@ call plug#begin()
     Plug 'Raimondi/delimitMate'
     Plug 'SidOfc/mkdx'
     Plug 'christoomey/vim-tmux-navigator'
-    Plug 'davidhalter/jedi-vim'
+    "Plug 'davidhalter/jedi-vim'
     Plug 'dense-analysis/ale'
     Plug 'ervandew/supertab'
     Plug 'godlygeek/tabular'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
     Plug 'jlanzarotta/bufexplorer'
+    Plug 'johmsalas/text-case.nvim'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'ludovicchabant/vim-gutentags'
+    Plug 'mileszs/ack.vim'
     Plug 'preservim/nerdcommenter'
     Plug 'preservim/nerdtree'
     Plug 'preservim/tagbar'
@@ -254,3 +256,56 @@ nnoremap <leader>p :Files<CR>
 
 " ** vim-notes
 let g:notes_directories = ['~/Documents/vimnotes',]
+
+" ** ack.vim
+" Use ripgrep for searching ⚡️
+" Options include:
+" --vimgrep -> Needed to parse the rg response properly for ack.vim
+" --type-not sql -> Avoid huge sql file dumps as it slows down the search
+" --smart-case -> Search case insensitive if all lowercase pattern, Search case sensitively otherwise
+let g:ackprg = 'rg --vimgrep --type-not sql --smart-case'
+
+" Auto close the Quickfix list after pressing '<enter>' on a list item
+let g:ack_autoclose = 1
+
+" Any empty ack search will search for the work the cursor is on
+let g:ack_use_cword_for_empty_search = 1
+
+" Don't jump to first match
+cnoreabbrev Ack Ack!
+
+" Maps <leader>/ so we're ready to type the search keyword
+nnoremap <Leader>/ :Ack!<Space>
+" }}}
+
+" Navigate quickfix list with ease
+nnoremap <silent> [q :cprevious<CR>
+nnoremap <silent> ]q :cnext<CR>
+
+" text-case.nvim
+nnoremap gas :lua require('textcase').current_word('to_snake_case')<CR>
+nnoremap gad :lua require('textcase').current_word('to_dash_case')<CR>
+nnoremap gan :lua require('textcase').current_word('to_constant_case')<CR>
+nnoremap gad :lua require('textcase').current_word('to_dot_case')<CR>
+nnoremap gaa :lua require('textcase').current_word('to_phrase_case')<CR>
+nnoremap gac :lua require('textcase').current_word('to_camel_case')<CR>
+nnoremap gap :lua require('textcase').current_word('to_pascal_case')<CR>
+nnoremap gat :lua require('textcase').current_word('to_title_case')<CR>
+
+nnoremap gaS :lua require('textcase').lsp_rename('to_snake_case')<CR>
+nnoremap gaD :lua require('textcase').lsp_rename('to_dash_case')<CR>
+nnoremap gaN :lua require('textcase').lsp_rename('to_constant_case')<CR>
+nnoremap gaD :lua require('textcase').lsp_rename('to_dot_case')<CR>
+nnoremap gaA :lua require('textcase').lsp_rename('to_phrase_case')<CR>
+nnoremap gaC :lua require('textcase').lsp_rename('to_camel_case')<CR>
+nnoremap gaP :lua require('textcase').lsp_rename('to_pascal_case')<CR>
+nnoremap gaT :lua require('textcase').lsp_rename('to_title_case')<CR>
+
+nnoremap ges :lua require('textcase').operator('to_snake_case')<CR>
+nnoremap ged :lua require('textcase').operator('to_dash_case')<CR>
+nnoremap gen :lua require('textcase').operator('to_constant_case')<CR>
+nnoremap ged :lua require('textcase').operator('to_dot_case')<CR>
+nnoremap gea :lua require('textcase').operator('to_phrase_case')<CR>
+nnoremap gec :lua require('textcase').operator('to_camel_case')<CR>
+nnoremap gep :lua require('textcase').operator('to_pascal_case')<CR>
+nnoremap get :lua require('textcase').operator('to_title_case')<CR>
