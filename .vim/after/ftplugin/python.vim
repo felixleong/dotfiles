@@ -5,7 +5,7 @@ let g:ale_python_auto_pipenv = 1
 let g:ale_python_mypy_auto_poetry = 1
 let g:ale_python_mypy_auto_pipenv = 1
 
-let g:ale_python_mypy_options = '--install-types'
+let g:ale_python_mypy_options = '--install-types --follow-untyped-imports'
 let g:ale_python_black_options = '--preview'
 
 let b:ale_fixers = ['pycln', 'ruff', 'ruff_format', 'isort']
