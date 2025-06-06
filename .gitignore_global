@@ -71,4 +71,8 @@ vendor/bundle
 # NodeJS development
 ####################
 node_modules/
-!.github/**/node_modules  # Exclude for Github Action scripts.
+
+# Github Actions specific overrides #
+#####################################
+!.github/**/node_modules/
+!.github/**/dist/

@@ -215,6 +215,7 @@ iabbr xxfn <C-R>=expand("%:t")<CR>
 " -------------------------
 " ** NERDTree
 let NERDTreeIgnore=['\.a$', '\.o$', '\.pyc$', '\.swp$', '\~$', '__pycache__', '^tags', '^tags.\(lock\|temp\)$']
+let NERDTreeShowHidden=1
 let NERDTreeChDirMode=2
 nmap <silent> <Leader>tr :NERDTreeToggle<CR>
 
@@ -309,3 +310,6 @@ nnoremap gea :lua require('textcase').operator('to_phrase_case')<CR>
 nnoremap gec :lua require('textcase').operator('to_camel_case')<CR>
 nnoremap gep :lua require('textcase').operator('to_pascal_case')<CR>
 nnoremap get :lua require('textcase').operator('to_title_case')<CR>
+
+" YouCompleteMe
+let g:ycm_key_list_stop_completion = ['<C-y>', '<C-t>', '<CR>']
