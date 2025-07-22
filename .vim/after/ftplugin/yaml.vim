@@ -3,4 +3,5 @@ setlocal sts=2
 setlocal ts=2
 setlocal expandtab
 
+set foldenable foldmethod=indent foldcolumn=4 foldlevel=99
 let b:ale_fixers = ['prettier']

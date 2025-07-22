@@ -14,6 +14,7 @@
     lc = log ORIG_HEAD.. --stat --no-merges
     di = diff
     dic = diff --cached -b
+    dns = diff --name-status
     di-noimport = diff --ignore-matching-lines='^(from .* )*import .*'
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     type = cat-file -t
@@ -91,11 +92,6 @@
 [color]
     ui = auto
     diff = auto
-[fetch]
-    prune = true
-[push]
-    default = simple
-    autoSetupRemote = true
 
 [diff]
     whitespace = red reverse
@@ -104,7 +100,20 @@
 [filter "tabspace"]
     smudge = unexpand --tabs=4 --first-only
     clean = expand --tabs=4 --initial
-[pull]
-    rebase = true
+[branch]
+    autoSetupRemote = simple
 [merge]
     ff = no
+[fetch]
+    prune = true
+[pull]
+    rebase = true
+[push]
+    default = simple
+    autoSetupRemote = true
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential

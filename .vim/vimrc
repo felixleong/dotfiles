@@ -1,21 +1,23 @@
 " VIM Plug and plugins
 " --------------------
 call plug#begin()
+    Plug 'Konfekt/FastFold'
     Plug 'Raimondi/delimitMate'
     Plug 'SidOfc/mkdx'
     Plug 'christoomey/vim-tmux-navigator'
-    "Plug 'davidhalter/jedi-vim'
     Plug 'dense-analysis/ale'
     Plug 'ervandew/supertab'
     Plug 'godlygeek/tabular'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-    Plug 'jlanzarotta/bufexplorer'
+    Plug 'jeetsukumaran/vim-buffergator'
+    Plug 'jeetsukumaran/vim-pythonsense'
     Plug 'johmsalas/text-case.nvim'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'ludovicchabant/vim-gutentags'
     Plug 'mileszs/ack.vim'
     Plug 'preservim/nerdcommenter'
+    Plug 'preservim/nerdtree'
     Plug 'preservim/nerdtree'
     Plug 'preservim/tagbar'
     Plug 'preservim/vimux'
@@ -98,7 +100,7 @@ set iminsert=1
 set imsearch=1
 
 " Ignore directories when searching
-set wildignore+=**/node_modules/**,**/vendor/**,**/migrations/**,**/__pycache__/**
+set wildignore+=**/node_modules/**,**/vendor/**,**/__pycache__/**,**/.*_cache/**
 
 " Auto redraw if necessary
 au FocusGained * :redraw!
@@ -128,6 +130,7 @@ nnoremap <silent> <Leader>f2 :set foldlevel=2<CR>
 nnoremap <silent> <Leader>f3 :set foldlevel=3<CR>
 nnoremap <silent> <Leader>fa :set foldlevel=0<CR>
 nnoremap <silent> <Leader>f0 :set foldlevel=999<CR>
+nnoremap <silent> <Space> za
 
 " Replacement patterns
 inoremap qq <Esc>
@@ -214,7 +217,11 @@ iabbr xxfn <C-R>=expand("%:t")<CR>
 " Customization for plugins
 " -------------------------
 " ** NERDTree
-let NERDTreeIgnore=['\.a$', '\.o$', '\.pyc$', '\.swp$', '\~$', '__pycache__', '^tags', '^tags.\(lock\|temp\)$']
+let NERDTreeIgnore=[
+\  '\.a$', '\.o$', '\.swp$', '\~$',
+\  '^tags', '^tags.\(lock\|temp\)$',
+\  '\.pyc$', '__pycache__', '^\..*_cache$', '^.pytest.*'
+\]
 let NERDTreeShowHidden=1
 let NERDTreeChDirMode=2
 nmap <silent> <Leader>tr :NERDTreeToggle<CR>
@@ -266,9 +273,6 @@ let g:notes_directories = ['~/Documents/vimnotes',]
 " --smart-case -> Search case insensitive if all lowercase pattern, Search case sensitively otherwise
 let g:ackprg = 'rg --vimgrep --type-not sql --smart-case'
 
-" Auto close the Quickfix list after pressing '<enter>' on a list item
-let g:ack_autoclose = 1
-
 " Any empty ack search will search for the work the cursor is on
 let g:ack_use_cword_for_empty_search = 1
 
@@ -313,3 +317,12 @@ nnoremap get :lua require('textcase').operator('to_title_case')<CR>
 
 " YouCompleteMe
 let g:ycm_key_list_stop_completion = ['<C-y>', '<C-t>', '<CR>']
+
+" FastFold
+let g:fastfold_savehook = 1
+let g:fastfold_fold_command_suffixes =  ['x','X','a','A','o','O','c','C']
+let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
+let g:yaml_fold = 1
+
+" Buffergator
+let g:buffergator_viewport_split_policy="T"

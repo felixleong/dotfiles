@@ -74,5 +74,4 @@ node_modules/
 
 # Github Actions specific overrides #
 #####################################
-!.github/**/node_modules/
 !.github/**/dist/
