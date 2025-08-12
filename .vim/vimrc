@@ -8,7 +8,7 @@ call plug#begin()
     Plug 'dense-analysis/ale'
     Plug 'ervandew/supertab'
     Plug 'godlygeek/tabular'
-    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
     Plug 'jeetsukumaran/vim-buffergator'
     Plug 'jeetsukumaran/vim-pythonsense'
     Plug 'johmsalas/text-case.nvim'
@@ -16,6 +16,9 @@ call plug#begin()
     Plug 'junegunn/fzf.vim'
     Plug 'ludovicchabant/vim-gutentags'
     Plug 'mileszs/ack.vim'
+    Plug 'mzlogin/vim-markdown-toc'
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'plasticboy/vim-markdown'
     Plug 'preservim/nerdcommenter'
     Plug 'preservim/nerdtree'
     Plug 'preservim/nerdtree'
@@ -220,7 +223,8 @@ iabbr xxfn <C-R>=expand("%:t")<CR>
 let NERDTreeIgnore=[
 \  '\.a$', '\.o$', '\.swp$', '\~$',
 \  '^tags', '^tags.\(lock\|temp\)$',
-\  '\.pyc$', '__pycache__', '^\..*_cache$', '^.pytest.*'
+\  '\.pyc$', '__pycache__', '^\..*_cache$', '^.pytest.*',
+\  '.git$'
 \]
 let NERDTreeShowHidden=1
 let NERDTreeChDirMode=2
@@ -270,7 +274,8 @@ let g:notes_directories = ['~/Documents/vimnotes',]
 " Options include:
 " --vimgrep -> Needed to parse the rg response properly for ack.vim
 " --type-not sql -> Avoid huge sql file dumps as it slows down the search
-" --smart-case -> Search case insensitive if all lowercase pattern, Search case sensitively otherwise
+" --smart-case -> Search case insensitive if all lowercase pattern, Search case
+"  sensitively otherwise
 let g:ackprg = 'rg --vimgrep --type-not sql --smart-case'
 
 " Any empty ack search will search for the work the cursor is on
@@ -289,7 +294,7 @@ nnoremap <silent> ]q :cnext<CR>
 
 " text-case.nvim
 nnoremap gas :lua require('textcase').current_word('to_snake_case')<CR>
-nnoremap gad :lua require('textcase').current_word('to_dash_case')<CR>
+nnoremap gab :lua require('textcase').current_word('to_dash_case')<CR>
 nnoremap gan :lua require('textcase').current_word('to_constant_case')<CR>
 nnoremap gad :lua require('textcase').current_word('to_dot_case')<CR>
 nnoremap gaa :lua require('textcase').current_word('to_phrase_case')<CR>
@@ -297,23 +302,23 @@ nnoremap gac :lua require('textcase').current_word('to_camel_case')<CR>
 nnoremap gap :lua require('textcase').current_word('to_pascal_case')<CR>
 nnoremap gat :lua require('textcase').current_word('to_title_case')<CR>
 
-nnoremap gaS :lua require('textcase').lsp_rename('to_snake_case')<CR>
-nnoremap gaD :lua require('textcase').lsp_rename('to_dash_case')<CR>
-nnoremap gaN :lua require('textcase').lsp_rename('to_constant_case')<CR>
-nnoremap gaD :lua require('textcase').lsp_rename('to_dot_case')<CR>
-nnoremap gaA :lua require('textcase').lsp_rename('to_phrase_case')<CR>
-nnoremap gaC :lua require('textcase').lsp_rename('to_camel_case')<CR>
-nnoremap gaP :lua require('textcase').lsp_rename('to_pascal_case')<CR>
-nnoremap gaT :lua require('textcase').lsp_rename('to_title_case')<CR>
-
 nnoremap ges :lua require('textcase').operator('to_snake_case')<CR>
-nnoremap ged :lua require('textcase').operator('to_dash_case')<CR>
+nnoremap geb :lua require('textcase').operator('to_dash_case')<CR>
 nnoremap gen :lua require('textcase').operator('to_constant_case')<CR>
 nnoremap ged :lua require('textcase').operator('to_dot_case')<CR>
 nnoremap gea :lua require('textcase').operator('to_phrase_case')<CR>
 nnoremap gec :lua require('textcase').operator('to_camel_case')<CR>
 nnoremap gep :lua require('textcase').operator('to_pascal_case')<CR>
 nnoremap get :lua require('textcase').operator('to_title_case')<CR>
+
+nnoremap gaS :lua require('textcase').lsp_rename('to_snake_case')<CR>
+nnoremap gaB :lua require('textcase').lsp_rename('to_dash_case')<CR>
+nnoremap gaN :lua require('textcase').lsp_rename('to_constant_case')<CR>
+nnoremap gaD :lua require('textcase').lsp_rename('to_dot_case')<CR>
+nnoremap gaA :lua require('textcase').lsp_rename('to_phrase_case')<CR>
+nnoremap gaC :lua require('textcase').lsp_rename('to_camel_case')<CR>
+nnoremap gaP :lua require('textcase').lsp_rename('to_pascal_case')<CR>
+nnoremap gaT :lua require('textcase').lsp_rename('to_title_case')<CR>
 
 " YouCompleteMe
 let g:ycm_key_list_stop_completion = ['<C-y>', '<C-t>', '<CR>']
@@ -326,3 +331,7 @@ let g:yaml_fold = 1
 
 " Buffergator
 let g:buffergator_viewport_split_policy="T"
+
+" mzlogin/vim-markdown-toc
+let g:vmt_fence_text = "TOC"
+let g:vmt_fence_closing_text = "/TOC"
