@@ -4,6 +4,7 @@ call plug#begin()
     Plug 'Konfekt/FastFold'
     Plug 'Raimondi/delimitMate'
     Plug 'SidOfc/mkdx'
+    Plug 'airblade/vim-gitgutter'
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'dense-analysis/ale'
     Plug 'edkolev/tmuxline.vim'
