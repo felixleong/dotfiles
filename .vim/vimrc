@@ -6,6 +6,7 @@ call plug#begin()
     Plug 'SidOfc/mkdx'
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'dense-analysis/ale'
+    Plug 'edkolev/tmuxline.vim'
     Plug 'ervandew/supertab'
     Plug 'godlygeek/tabular'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
@@ -18,7 +19,6 @@ call plug#begin()
     Plug 'mileszs/ack.vim'
     Plug 'mzlogin/vim-markdown-toc'
     Plug 'neovim/nvim-lspconfig'
-    Plug 'plasticboy/vim-markdown'
     Plug 'preservim/nerdcommenter'
     Plug 'preservim/nerdtree'
     Plug 'preservim/nerdtree'
@@ -64,7 +64,6 @@ set shortmess=atI
 set wildmenu wildmode=list:longest
 set wildignore=*.swp,*.bak,*.pyc,*.class,tags
 set noswapfile
-set pastetoggle=<f2>
 
 set foldmethod=syntax
 set foldopen-=search
@@ -96,11 +95,6 @@ set incsearch
 set ignorecase smartcase
 set gdefault
 set hlsearch
-
-" Japanese IME setting
-set imdisable imcmdline
-set iminsert=1
-set imsearch=1
 
 " Ignore directories when searching
 set wildignore+=**/node_modules/**,**/vendor/**,**/__pycache__/**,**/.*_cache/**
@@ -230,9 +224,6 @@ let NERDTreeShowHidden=1
 let NERDTreeChDirMode=2
 nmap <silent> <Leader>tr :NERDTreeToggle<CR>
 
-" ** Tasklist
-map <leader>tl <Plug>TaskList
-
 " ** Supertab
 let g:SuperTabDefaultCompletionType="context"
 
@@ -241,6 +232,7 @@ map <leader>x <plug>NERDCommenterToggle
 
 " ** Airline
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tagbar#enabled = 0
 let g:airline_powerline_fonts = 1
 set laststatus=2
 
