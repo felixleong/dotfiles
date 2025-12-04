@@ -7,6 +7,7 @@ call plug#begin()
     Plug 'airblade/vim-gitgutter'
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'dense-analysis/ale'
+    Plug 'easymotion/vim-easymotion'
     Plug 'edkolev/tmuxline.vim'
     Plug 'ervandew/supertab'
     Plug 'godlygeek/tabular'
