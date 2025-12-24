@@ -6,7 +6,7 @@
     excludesfile = ~/.gitignore_global
     eol = lf
     pager = less -iXFR
-    autocrlf = true
+    autocrlf = input
 [alias]
     ci = commit
     co = checkout
