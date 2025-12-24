@@ -1,4 +1,5 @@
 set foldenable foldmethod=indent foldcolumn=4 foldnestmax=4 foldlevel=99
+set colorcolumn=88
 set number
 
 " ALE options
