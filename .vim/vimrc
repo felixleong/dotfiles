@@ -1,4 +1,10 @@
 " VIM Plug and plugins
+"
+" NOTE:
+" Plugin directory: .local/share/nvim/plugged/
+"
+" In the times when it is not there, execute the following command to find out where:
+" :set runtimepath?
 " --------------------
 call plug#begin()
     Plug 'Konfekt/FastFold'
