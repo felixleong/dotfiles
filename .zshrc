@@ -27,7 +27,7 @@ ZSH_THEME="fino"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -63,6 +63,9 @@ HIST_STAMPS="yyyy-mm-dd"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# PLUGIN CONFIGURATION
+ZSH_TMUX_AUTOSTART=true
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -77,6 +80,7 @@ plugins=(
     dirhistory
     docker
     docker-compose
+    dotenv
     fzf
     git
     git-auto-fetch
@@ -104,11 +108,11 @@ export UGID="$(id -u):$(id -g)"
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+export EDITOR='nvim'
+else
+export EDITOR='mvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -148,8 +152,5 @@ export NVM_DIR="$HOME/.nvm"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-
-# PLUGIN CONFIGURATION
-ZSH_TMUX_AUTOSTART=true
 
 if [ -e /home/sehhui/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sehhui/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
