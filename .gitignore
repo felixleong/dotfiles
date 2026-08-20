@@ -1,3 +1,5 @@
+*.old
+
 .ptpython/history
 .vim/*plug*
 .tmux/plugins

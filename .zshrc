@@ -65,18 +65,38 @@ HIST_STAMPS="yyyy-mm-dd"
 
 # PLUGIN CONFIGURATION
 ZSH_TMUX_AUTOSTART=true
+ZSH_DOTENV_PROMPT=false
 
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
+# VIRTUAL ENVIRONMENTS
+# ====================
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# Ruby
+if type "rbenv" &> /dev/null; then
+    eval "$(rbenv init -)"
+fi
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Nix (Github Action)
+if [ -e /home/sehhui/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sehhui/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+# PLUGINS
+# =======
 plugins=(
-    archlinux
+    aws
+    bundler
     colorize
     colored-man-pages
     debian
     dircycle
+    direnv
     dirhistory
     docker
     docker-compose
@@ -88,11 +108,15 @@ plugins=(
     git-flow
     gitfast
     jsontools
+    npm
+    nvm
     per-directory-history
+    pyenv
     python
     timer
     tmux
     vi-mode
+    zsh-interactive-cd
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -126,31 +150,12 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls="ls --color=tty --group-directories-first"
-alias bdex='bundle exec'
-alias rbex='bundle exec ruby'
-alias rkex='bundle exec rake'
 
 # Windows specific shorthand
 alias wcd=$'cd $(wslpath $(cmd.exe /c "echo %USERPROFILE%") | tr -d \'\\r\')'
 alias wmount='sudo mount -t drvfs'
 
+# Custom aliases
 if [[ -a $HOME/.aliases ]]; then
     source $HOME/.aliases
 fi
-
-# Ruby stuff
-if type "rbenv" &> /dev/null; then
-    eval "$(rbenv init -)"
-fi
-
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-if [ -e /home/sehhui/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sehhui/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
